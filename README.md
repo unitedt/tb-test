@@ -40,7 +40,8 @@ CREATE TABLE public.promocodes_codes
 CREATE UNIQUE INDEX promocodes_codes_code_uindex ON public.promocodes_codes (code);
 ~~~
 
-однако подойдёт и вариант с денормализацией:
+однако подойдёт и вариант с одной таблицей (если мы принимаем то, что code - это уникальный идентификатор промокода, 
+один промокод не может иметь и цифровое, и буквенно-цифровое представление):
 
 ~~~
 CREATE TABLE public.promocodes
